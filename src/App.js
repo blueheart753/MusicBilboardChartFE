@@ -2,7 +2,7 @@ import "./static/css/App.css";
 import "./static/css/Anime.css";
 import Header from "./view/Header";
 import Section from "./view/Section";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 const App = () => {
   window.addEventListener("load", () => {

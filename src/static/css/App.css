@@ -1,7 +1,6 @@
 @font-face {
-  font-family: 'JalnanGothic';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff')
-    format('woff');
+  font-family: "JalnanGothic";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff") format("woff");
   font-weight: lighter;
   font-style: normal;
 }
@@ -22,9 +21,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 @font-face {
-  font-family: 'Cafe24Supermagic-Bold-v1.0';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/Cafe24Supermagic-Bold-v1.0.woff2')
-    format('woff2');
+  font-family: "Cafe24Supermagic-Bold-v1.0";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/Cafe24Supermagic-Bold-v1.0.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -104,57 +102,42 @@ header {
   transition: 1s;
   font-size: 2em;
   padding: 30px;
-  font-family: 'JalnanGothic';
+  font-family: "JalnanGothic";
   word-spacing: 10px;
   letter-spacing: 6px;
   line-height: 45px;
+  color: #fff;
   opacity: 0;
 }
 
 .startMent {
   font-size: 2.5em;
-  color: #fff;
-  transform: translateY(-100px);
-}
-
-.startMent + p {
-  transform: translateX(300px);
+  transform: rotate(-30deg) translateX(-300px) translateY(300px);
 }
 
 .ment + p {
   opacity: 0;
-  transition: 1.4s;
   font-size: 1.5em;
-  font-family: 'Cafe24Supermagic-Bold-v1.0';
+  font-family: "Cafe24Supermagic-Bold-v1.0";
   word-spacing: 10px;
   text-align: center;
   line-height: 50px;
+  color: #fff;
+  transition: 1s;
 }
 
 .ment_1 + p {
-  color: #fff;
+  transform: rotate(30deg) translateY(-300px) translateX(300px);
 }
 
 .ment_2 {
-  transform: translateX(-200px);
-  color: #fff;
+  transform: translateY(80px);
 }
 
 .ment_2 + p {
-  transform: translateX(-250px) rotateY(160deg);
-  color: #fff;
+  transform: translateY(-80px);
 }
 
 .animeMent {
   padding: 0 20px;
-}
-
-.ment_3 {
-  transform: translateY(150px);
-  color: #fff;
-}
-
-.ment_3 + p {
-  transform: translateY(-150px);
-  color: #fff;
 }

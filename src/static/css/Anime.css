@@ -1,9 +1,9 @@
 .startMent + p.animeMent {
-  transform: translateX(0);
+  transform: rotate(0) translateY(0) translateX(0);
   opacity: 1;
 }
 .startMent.animeStartMent {
-  transform: translateY(0);
+  transform: rotate(0) translateY(0) translateX(0);
   opacity: 1;
 }
 
@@ -14,7 +14,7 @@
 
 .ment_2 + p.animeMent {
   opacity: 1;
-  transform: translateX(0) rotateY(0deg);
+  transform: rotate(0) translateY(0) translateX(0);
 }
 
 .ment_3.ment_3Anime {
