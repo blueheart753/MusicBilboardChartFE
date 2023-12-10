@@ -1,26 +1,31 @@
-import "./static/css/App.css";
-import "./static/css/Anime.css";
-import Header from "./view/Header";
-import Section from "./view/Section";
-import { useEffect } from "react";
+"use client";
+import React, { useEffect } from "react";
+import Header from "../../view/Header";
+import Section from "../../view/Section";
 
-const App = () => {
+const addRemoveClassOnIntersection = (selector, className) => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((item) => {
+      item.isIntersecting ? item.target.classList.add(className) : item.target.classList.remove(className);
+    });
+  });
+
+  const elements = document.querySelectorAll(selector);
+  elements.forEach((el) => {
+    observer.observe(el);
+  });
+};
+
+const onLoadWindow = () => {
   window.addEventListener("load", () => {
     setTimeout(() => window.scrollTo(0, 0), 100);
   });
+};
 
-  const addRemoveClassOnIntersection = (selector, className) => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((item) => {
-        item.isIntersecting ? item.target.classList.add(className) : item.target.classList.remove(className);
-      });
-    });
-
-    const elements = document.querySelectorAll(selector);
-    elements.forEach((el) => {
-      observer.observe(el);
-    });
-  };
+const ActivityClientHook = () => {
+  useEffect(() => {
+    onLoadWindow();
+  }, []);
 
   useEffect(() => {
     addRemoveClassOnIntersection(".startMent", "animeStartMent");
@@ -48,4 +53,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default ActivityClientHook;
